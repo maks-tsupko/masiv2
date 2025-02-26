@@ -12,7 +12,7 @@ public class Main {
         System.out.println("задача 2");
         int[] money2 = {200, 250, 310, 400, 150};
         int sumMax1 = 0;
-        int sumMin = money2[4];
+        int sumMin = money2[0];
         for (int i = 0; i < money2.length; i++) {
             final int current = money2[i];
             if (current > sumMax1) {
@@ -32,16 +32,19 @@ public class Main {
         double[] money3 = {1000, 1200, 1150, 2500, 2700};
         double sum3 = 0;
         double averageAmount = 0;
-        double oneMonth = 31;
         for (int i = 0; i < money3.length; i++) {
             sum3 = sum3 + money3[i];
-            averageAmount = money3[i] / oneMonth;
         }
+        sum3 = sum3 / 5;
+        System.out.println(sum3);
+        
         System.out.println("Средняя сумма трат за месяц составила " + averageAmount + " рублей");
         System.out.println(" ");
         System.out.println("задача 4");
         char[] reverseFullName = {'n' , 'a' , 'v' , 'I' , ' ' , 'v' , 'o' , 'n' , 'a' , 'v' ,'I'};
+        char a = 0;
         for (int i = reverseFullName.length - 1; i >=0; i--) {
+            a += reverseFullName[i];
             System.out.print(reverseFullName[i]);
         }
 
