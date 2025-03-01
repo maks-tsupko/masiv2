@@ -42,9 +42,17 @@ public class Main {
         System.out.println(" ");
         System.out.println("задача 4");
         char[] reverseFullName = {'n' , 'a' , 'v' , 'I' , ' ' , 'v' , 'o' , 'n' , 'a' , 'v' ,'I'};
-        for (int i = reverseFullName.length - 1; i >=0; i--) {
-            System.out.print(reverseFullName[i]);
+        int left = 0;
+        int right = reverseFullName.length - 1;
+        while (left < right) {
+            char temp = reverseFullName[left];
+            reverseFullName[left] = reverseFullName[right];
+            reverseFullName[right] = temp;
+            left++;
+            right--;
         }
+        System.out.println(reverseFullName);
+
 
     }
 }
